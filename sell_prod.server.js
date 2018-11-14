@@ -2,7 +2,7 @@ var express = require('express');
 var config = require('./config/index');
 
 var port = process.env.PORT || config.build.port;
-
+var port = 8900;
 var app = express();
 
 var router = express.Router();
@@ -40,7 +40,7 @@ apiRoutes.get('/ratings', function (req, res) {
 		errno: 0,
 		data: ratings
 	});
-}); 
+});
 
 app.use('/api', apiRoutes);
 
